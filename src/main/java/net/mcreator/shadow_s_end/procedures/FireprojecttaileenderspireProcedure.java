@@ -31,7 +31,7 @@ public class FireprojecttaileenderspireProcedure {
 					Projectile _entityToSpawn = initArrowProjectile(new EndermagicEntity(ShadowsAndPjlunasEndModEntities.ENDERMAGIC.get(), 0, 0, 0, projectileLevel, createArrowWeaponItemStack(projectileLevel, 1, (byte) 0)), null, 5, true, false,
 							false, AbstractArrow.Pickup.DISALLOWED);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 4, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
@@ -43,7 +43,7 @@ public class FireprojecttaileenderspireProcedure {
 					Projectile _entityToSpawn = initArrowProjectile(new EndermagicEntity(ShadowsAndPjlunasEndModEntities.ENDERMAGIC.get(), 0, 0, 0, projectileLevel, createArrowWeaponItemStack(projectileLevel, 1, (byte) 0)), null, 5, true, false,
 							false, AbstractArrow.Pickup.DISALLOWED);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 4, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}

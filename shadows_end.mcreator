@@ -38,6 +38,32 @@
           "src/main/java/net/mcreator/shadow_s_end/entity/EndermagicEntity.java"
         ]
       }
+    },
+    {
+      "name": "Fireprojecttaileenderspire",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireprojecttaileenderspire",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/shadow_s_end/procedures/FireprojecttaileenderspireProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [],
