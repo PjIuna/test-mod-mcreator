@@ -1,6 +1,8 @@
 package net.mcreator.shadow_s_end.entity;
 
 import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
@@ -18,6 +20,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import net.mcreator.shadow_s_end.procedures.EndermagicWhileProjectileFlyingTickProcedure;
+import net.mcreator.shadow_s_end.procedures.EndermagicProjectileHitsProcedure;
 import net.mcreator.shadow_s_end.init.ShadowsAndPjlunasEndModEntities;
 
 import javax.annotation.Nullable;
@@ -76,8 +80,21 @@ public class EndermagicEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	@Override
+	public void onHitEntity(EntityHitResult entityHitResult) {
+		super.onHitEntity(entityHitResult);
+		EndermagicProjectileHitsProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+	}
+
+	@Override
+	public void onHitBlock(BlockHitResult blockHitResult) {
+		super.onHitBlock(blockHitResult);
+		EndermagicProjectileHitsProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
+	}
+
+	@Override
 	public void tick() {
 		super.tick();
+		EndermagicWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner());
 		if (this.isInGround())
 			this.discard();
 	}

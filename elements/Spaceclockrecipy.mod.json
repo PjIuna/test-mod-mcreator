@@ -1,0 +1,53 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "Items.CLOCK"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Items.ENDER_EYE"
+      },
+      {
+        "value": "Blocks.ENDER_CHEST"
+      },
+      {
+        "value": "Items.ENDER_EYE"
+      },
+      {
+        "value": "Blocks.END_STONE"
+      },
+      {
+        "value": "Items.CLOCK"
+      },
+      {
+        "value": "Blocks.END_STONE"
+      },
+      {
+        "value": "Items.DYE#4"
+      },
+      {
+        "value": "Blocks.LAPIS_BLOCK"
+      },
+      {
+        "value": "Items.DYE#4"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:SpaceClock"
+    },
+    "name": "spaceclockrecipy",
+    "namespace": "mod"
+  }
+}

@@ -23,6 +23,7 @@ import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.AdvancementHolder;
 
 import net.mcreator.shadow_s_end.network.ShadowsAndPjlunasEndModVariables;
+import net.mcreator.shadow_s_end.init.ShadowsAndPjlunasEndModGameRules;
 import net.mcreator.shadow_s_end.ShadowsAndPjlunasEndMod;
 
 public class SpaceClockRightclickedProcedure {
@@ -41,9 +42,10 @@ public class SpaceClockRightclickedProcedure {
 			}
 		}
 		if (world instanceof ServerLevel _level)
-			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "/tick rate 5");
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					("/tick rate " + (world instanceof ServerLevel _serverLevelGR3 ? _serverLevelGR3.getGameRules().getInt(ShadowsAndPjlunasEndModGameRules.AMOUNTSLOWEDDOWN) : 0)));
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.SPEED, 100, 3));
+			_entity.addEffect(new MobEffectInstance(MobEffects.SPEED, (world instanceof ServerLevel _serverLevelGR5 ? _serverLevelGR5.getGameRules().getInt(ShadowsAndPjlunasEndModGameRules.SPACECLOCKTIMEAMOUNTSLOWEDDOWNFOR) : 0) + 5, 3));
 		if (entity instanceof ServerPlayer _player && _player.level() instanceof ServerLevel _level) {
 			AdvancementHolder _adv = _level.getServer().getAdvancements().get(ResourceLocation.parse("shadows_and_pjlunas_end:madeinheaven"));
 			if (_adv != null) {
@@ -55,7 +57,7 @@ public class SpaceClockRightclickedProcedure {
 			}
 		}
 		SpaceClockEveryTickWhileUsingItemProcedure.execute(world, x, y, z);
-		ShadowsAndPjlunasEndMod.queueServerWork(95, () -> {
+		ShadowsAndPjlunasEndMod.queueServerWork((world instanceof ServerLevel _serverLevelGR8 ? _serverLevelGR8.getGameRules().getInt(ShadowsAndPjlunasEndModGameRules.SPACECLOCKTIMEAMOUNTSLOWEDDOWNFOR) : 0), () -> {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "/tick rate 20");
 			ShadowsAndPjlunasEndModVariables.WorldVariables.get(world).time_freezen = 0;

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "efe"
+  ],
+  "key": {
+    "a": "minecraft:ender_eye",
+    "b": "minecraft:ender_chest",
+    "c": "minecraft:end_stone",
+    "d": "minecraft:clock",
+    "e": "minecraft:lapis_lazuli",
+    "f": "minecraft:lapis_block"
+  },
+  "result": {
+    "id": "shadows_and_pjlunas_end:space_clock",
+    "count": 1
+  }
+}

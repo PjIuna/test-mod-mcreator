@@ -1,0 +1,12 @@
+{
+  "_fv": 79,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Amount Slowed Down By",
+    "description": "How slow you want the game to be (in ticks)",
+    "category": "PLAYER",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 5
+  }
+}

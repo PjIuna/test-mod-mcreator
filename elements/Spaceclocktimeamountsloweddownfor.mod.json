@@ -1,0 +1,12 @@
+{
+  "_fv": 79,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "timesloweddown",
+    "description": "how long you want the clock to slowdown time for (in ticks) Changeing this setting will break audio when using clock",
+    "category": "MISC",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 95
+  }
+}

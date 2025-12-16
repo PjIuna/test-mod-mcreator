@@ -56,6 +56,18 @@
             "type": "itemstack"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -158,6 +170,117 @@
           "src/main/java/net/mcreator/shadow_s_end/procedures/SpaceClockEveryTickWhileUsingItemProcedure.java"
         ]
       }
+    },
+    {
+      "name": "Spaceclockrecipy",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spaceclockrecipy",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/shadows_and_pjlunas_end/recipe/spaceclockrecipy.json",
+          "src/main/resources/data/shadows_and_pjlunas_end/advancement/recipes/spaceclockrecipy.json"
+        ]
+      }
+    },
+    {
+      "name": "Spaceclocktimeamountsloweddownfor",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spaceclocktimeamountsloweddownfor",
+      "metadata": {
+        "type": "number",
+        "files": []
+      }
+    },
+    {
+      "name": "Amountsloweddown",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amountsloweddown",
+      "metadata": {
+        "type": "number",
+        "files": []
+      }
+    },
+    {
+      "name": "Test",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spreadshot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/shadows_and_pjlunas_end/enchantment/spreadshot.json"
+        ]
+      }
+    },
+    {
+      "name": "EndermagicWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endermagic_while_projectile_flying_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/shadow_s_end/procedures/EndermagicWhileProjectileFlyingTickProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "EndermagicProjectileHits",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "endermagic_projectile_hits",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/shadow_s_end/procedures/EndermagicProjectileHitsProcedure.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -184,6 +307,30 @@
       ],
       "category": "master",
       "subtitle": "clock_ticking_sound"
+    },
+    {
+      "name": "magic_fly",
+      "files": [
+        "sci-fi-weapon-projectile-flyby-pulse-02-233852"
+      ],
+      "category": "player",
+      "subtitle": "magic flying"
+    },
+    {
+      "name": "spell_casted",
+      "files": [
+        "elemental-magic-spell-impact-incoming-228343"
+      ],
+      "category": "master",
+      "subtitle": "Spell Casted"
+    },
+    {
+      "name": "impact",
+      "files": [
+        "elemental-magic-spell-impact-outgoing-228342"
+      ],
+      "category": "block",
+      "subtitle": "Magic Impact"
     }
   ],
   "tag_elements": {
@@ -192,6 +339,15 @@
     ],
     "ITEMS:shadows_and_pjlunas_end:enderspire_repair_items": [
       "~Blocks.END_STONE"
+    ],
+    "ENCHANTMENTS:minecraft:tradeable": [
+      "~CUSTOM:Test"
+    ],
+    "ENCHANTMENTS:minecraft:on_random_loot": [
+      "~CUSTOM:Test"
+    ],
+    "ENCHANTMENTS:minecraft:non_treasure": [
+      "~CUSTOM:Test"
     ]
   },
   "tab_element_order": {},
@@ -202,11 +358,20 @@
       "advancements.madeinheaven.descr": "slow doooown time",
       "advancements.madeinheaven.title": "MADE IN HEAVEN",
       "subtitles.time_freeze": "time_slowed",
-      "subtitles.clock_ticking": "clock_ticking_sound"
+      "subtitles.clock_ticking": "clock_ticking_sound",
+      "gamerule.spaceclocktimeamountsloweddownfor.description": "how long you want the clock to slowdown time for (in ticks) Changeing this setting will break audio when using clock",
+      "gamerule.spaceclocktimeamountsloweddownfor": "timesloweddown",
+      "gamerule.amountsloweddown.description": "How slow you want the game to be (in ticks)",
+      "gamerule.amountsloweddown": "Amount Slowed Down By",
+      "enchantment.shadows_and_pjlunas_end.spreadshot": "SpreadShot",
+      "subtitles.magic_fly": "magic flying",
+      "subtitles.spell_casted": "Spell Casted",
+      "subtitles.impact": "Magic Impact"
     }
   },
   "metadata": {
     "files": [
+      "src/main/java/net/mcreator/shadow_s_end/init/ShadowsAndPjlunasEndModGameRules.java",
       "src/main/java/net/mcreator/shadow_s_end/init/ShadowsAndPjlunasEndModItems.java",
       "src/main/java/net/mcreator/shadow_s_end/init/ShadowsAndPjlunasEndModEntityRenderers.java",
       "src/main/java/net/mcreator/shadow_s_end/init/ShadowsAndPjlunasEndModEntities.java",

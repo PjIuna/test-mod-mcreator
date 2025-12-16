@@ -4,5 +4,13 @@
   "advancements.madeinheaven.descr": "slow doooown time",
   "advancements.madeinheaven.title": "MADE IN HEAVEN",
   "subtitles.time_freeze": "time_slowed",
-  "subtitles.clock_ticking": "clock_ticking_sound"
+  "subtitles.clock_ticking": "clock_ticking_sound",
+  "gamerule.spaceclocktimeamountsloweddownfor.description": "how long you want the clock to slowdown time for (in ticks) Changeing this setting will break audio when using clock",
+  "gamerule.spaceclocktimeamountsloweddownfor": "timesloweddown",
+  "gamerule.amountsloweddown.description": "How slow you want the game to be (in ticks)",
+  "gamerule.amountsloweddown": "Amount Slowed Down By",
+  "enchantment.shadows_and_pjlunas_end.spreadshot": "SpreadShot",
+  "subtitles.magic_fly": "magic flying",
+  "subtitles.spell_casted": "Spell Casted",
+  "subtitles.impact": "Magic Impact"
 }

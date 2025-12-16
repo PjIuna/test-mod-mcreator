@@ -23,7 +23,7 @@ public class EnderspireItem extends Item {
 	@Override
 	public InteractionResult use(Level world, Player entity, InteractionHand hand) {
 		InteractionResult ar = super.use(world, entity, hand);
-		FireprojecttaileenderspireProcedure.execute(world, entity, entity.getItemInHand(hand));
+		FireprojecttaileenderspireProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, entity.getItemInHand(hand));
 		return ar;
 	}
 }

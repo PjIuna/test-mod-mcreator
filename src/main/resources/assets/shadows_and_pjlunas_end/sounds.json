@@ -16,5 +16,32 @@
         "stream": false
       }
     ]
+  },
+  "magic_fly": {
+    "subtitle": "subtitles.magic_fly",
+    "sounds": [
+      {
+        "name": "shadows_and_pjlunas_end:sci-fi-weapon-projectile-flyby-pulse-02-233852",
+        "stream": false
+      }
+    ]
+  },
+  "spell_casted": {
+    "subtitle": "subtitles.spell_casted",
+    "sounds": [
+      {
+        "name": "shadows_and_pjlunas_end:elemental-magic-spell-impact-incoming-228343",
+        "stream": false
+      }
+    ]
+  },
+  "impact": {
+    "subtitle": "subtitles.impact",
+    "sounds": [
+      {
+        "name": "shadows_and_pjlunas_end:elemental-magic-spell-impact-outgoing-228342",
+        "stream": false
+      }
+    ]
   }
 }
